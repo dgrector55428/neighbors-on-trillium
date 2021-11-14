@@ -1,0 +1,10 @@
+#map {
+  height: 60%;
+  width: 60%;
+  position: absolute;
+  top: 120px;
+  margin-bottom: 100px;
+  border: 2px solid #cecece;
+  /* -webkit-box-shadow: 5px 5px 15px 5px #7d7d7d;
+  box-shadow: 5px 5px 15px 5px #7d7d7d; */
+}

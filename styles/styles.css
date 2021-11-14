@@ -1,0 +1,27 @@
+body {
+  background: #f8f9fa !important;
+}
+
+#logo {
+  width: 60px;
+  margin-right: 20px;
+}
+
+.nav-brand {
+  width: 10%;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+#addressWrapper {
+  padding: 20px;
+}
+#addressWrapper .frmCtrl {
+  width: 300px;
+}
+
+.icons {
+  margin-right: 8px;
+}

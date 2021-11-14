@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neighbors On Trillium</title>
+    <link rel="stylesheet" href="./styles/map.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-9ZfPnbegQSumzaE7mks2IYgHoayLtuto3AS6ieArECeaR8nCfliJVuLh/GaQ1gyM"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row" style="height: 10vh">
+        <div class="col-6" style="border-bottom: 1px solid grey">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand nav-brand" href="#"
+                ><img
+                  id="logo"
+                  src="./images/trillium-logo.png"
+                  alt="trillium flower logo"
+                  width="20"
+                />Neighbors on Trillium</a
+              >
+            </div>
+          </nav>
+        </div>
+        <div class="col-6" style="border-bottom: 1px solid grey">
+          <div
+            class="alert hidden"
+            role="alert"
+            id="alert"
+            style="
+              width: 50%;
+              padding: 10px;
+              margin-top: 20px;
+              float: right;
+              font-weight: 700;
+              font-size: 20px;
+              letter-spacing: 1.5px;
+            "
+          ></div>
+        </div>
+      </div>
+      <div class="row" style="height: 90vh">
+        <div class="col-2" style="border-right: 1px solid grey">
+          <div class="d-grid gap-2 col-6 mx-auto" style="margin-top: 20px">
+            <button
+              class="btn btn-primary"
+              type="button"
+              onclick="addAddress()"
+            >
+              <i class="far fa-plus icons"></i>
+              Add Address
+            </button>
+            <button class="btn btn-primary" type="button" onclick="showMap()">
+              <i class="fad fa-map-marked-alt icons"></i>
+              View Map
+            </button>
+          </div>
+        </div>
+        <div class="col-10 align-self-center">
+          <div id="map" class=""></div>
+          <div
+            id="addressWrapper"
+            class="hidden"
+            style="height: 50vh; z-index: -1"
+          >
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Email address</label
+              >
+              <input
+                type="email"
+                class="form-control form-control-sm frmCtrl"
+                id="exampleFormControlInput1"
+                placeholder="name@example.com"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label"
+                >Example textarea</label
+              >
+              <input
+                type="email"
+                class="form-control form-control-sm frmCtrl"
+                id="exampleFormControlInput1"
+                placeholder="name@example.com"
+              />
+            </div>
+          </div>
+          <div class="row hidden" id="displayAddress">
+            <div class="col-md-6">
+              <h3 style="border-bottom: 1px solid lightgrey">Address Info</h3>
+            </div>
+            <div class="col-md-12" style="margin-top: 10px">
+              <span id="taxpayer" style="font-weight: bold"></span>
+              <span id="streetAddress"></span>
+              <span id="city"></span> <span id="state"></span>
+              <span id="zip"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=?&callback=initMap&v=weekly"
+      async
+    ></script>
+
+    <script src="./vendors/jquery.js"></script>
+    <script src="./vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./vendors/axios.min.js"></script>
+    <script src="./scripts/map.js"></script>
+    <script src="./scripts/scripts.js"></script>
+  </body>
+</html>
